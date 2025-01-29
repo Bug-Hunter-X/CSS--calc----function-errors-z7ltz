@@ -1,0 +1,12 @@
+To fix these issues, ensure that all values within the `calc()` function have compatible units and that the operator precedence is correct using parenthesis: 
+
+```css
+.element {
+  width: calc(100% - 10px); /* Correct */
+  height: calc(200px - 20px); /* Correct, using consistent px units */
+  height: calc(50% - 10%); /* Correct, using percentages */ 
+  width: calc((100% - 20px) / 2); /* Correct and demonstrates precedence */
+}
+```
+
+Always double-check units and use parentheses to ensure calculations are performed as expected.  Simplifying calculations when possible will improve readability and reduce the potential for errors.
