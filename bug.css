@@ -1,0 +1,13 @@
+The CSS `calc()` function can produce unexpected results if you don't carefully consider operator precedence and unit compatibility.  For example:
+
+```css
+.element { 
+  width: calc(100% - 10px); /* Correct */
+  width: calc(100% - 10); /* Incorrect: Missing 'px' unit */
+  width: calc(50% + 50% + 10px); /*Correct but can be simplified to 100% + 10px which also results in an error */
+  height: calc(200px - 10%); /* Incorrect: Mixing percentages and pixels directly */
+  width: calc(100% - (10px + 5px)); /* Correct use of parenthesis */
+} 
+```
+
+Incorrect usage can lead to unexpected widths or heights, sometimes rendering elements invisible or overlapping.
